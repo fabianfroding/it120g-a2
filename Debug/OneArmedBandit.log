@@ -1,4 +1,6 @@
-﻿  Game.cpp
-  OneArmedBandit.cpp
-  Generating Code...
+﻿  OneArmedBandit.cpp
+C:\Users\fabia\source\repos\OneArmedBandit\OneArmedBandit\OneArmedBandit.cpp(55,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\fabia\source\repos\OneArmedBandit\OneArmedBandit\OneArmedBandit.cpp(57,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\fabia\source\repos\OneArmedBandit\OneArmedBandit\OneArmedBandit.cpp(70,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\fabia\source\repos\OneArmedBandit\OneArmedBandit\OneArmedBandit.cpp(74,23): warning C4018: '<': signed/unsigned mismatch
   OneArmedBandit.vcxproj -> C:\Users\fabia\source\repos\OneArmedBandit\Debug\OneArmedBandit.exe
