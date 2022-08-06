@@ -16,7 +16,7 @@ const char GameSymbols[3] = { 'A', 'O', 'X' };
 ============================================================*/
 
 /*	Reusable function for reading option-input chosen by the player.
-	Returns an integer corresponding the the chosen option if valid, else return -1. */
+	Returns an integer corresponding to the chosen option if valid, else return -1. */
 int PromptForInputOption(string promptMessage, int numOptions) {
 	string input;
 	cout << promptMessage << "\n";
@@ -51,7 +51,7 @@ bool IsMatching(char char1, char char2, char char3) {
 	return char1 == char2 && char1 == char3;
 }
 
-char* GenerateRandomSymbols(int cols, int rows, char randomSymbols[][3]) {
+void GenerateRandomSymbols(int cols, int rows, char randomSymbols[][NUM_COLS]) {
 	for (size_t i = 0; i < cols; i++) {
 		cout << "\n";
 		for (size_t j = 0; j < rows; j++) {
@@ -60,18 +60,15 @@ char* GenerateRandomSymbols(int cols, int rows, char randomSymbols[][3]) {
 			cout << " " << randomSymbols[i][j] << " ";
 		}
 	}
-	return *randomSymbols;
 }
 
 int GetNumMatches(int cols, int rows, char randomSymbols[][NUM_COLS]) {
 	int numCorrectMatches = 0;
 
-	// Check rows
 	for (size_t i = 0; i < rows; i++) {
+		// Check rows
 		if (IsMatching(randomSymbols[i][0], randomSymbols[i][1], randomSymbols[i][2])) numCorrectMatches++;
-	}
-	// Check columns
-	for (size_t i = 0; i < cols; i++) {
+		// Check columns
 		if (IsMatching(randomSymbols[0][i], randomSymbols[1][i], randomSymbols[2][i])) numCorrectMatches++;
 	}
 	// Check diagonals
